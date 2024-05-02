@@ -7,7 +7,7 @@ import DateRangeIcon from "@mui/icons-material/DateRange";
 
 const RealTimeDisplay = ({ formData, selectedDate }) => (
   <Card
-    className="rounded-lg h-full w-1/6 "
+    className="rounded-lg h-full w-full md:w-1/6  "
     title={formData.category ? formData.category : "ยังไม่ระบุหมวดหมู่"}
     style={{ backgroundColor: "#EBF5FB", position: "sticky" }}
   >

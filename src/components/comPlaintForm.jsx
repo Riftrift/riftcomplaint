@@ -56,18 +56,19 @@ export const ComplaintForm = () => {
   };
 
   return (
-    <div className="flex px-10 pt-20 w-full ">
+    // <div className="flex flex-row px-10 pt-20 w-full ">
+    <div className="flex flex-col px-4 pt-10 w-full md:flex-row md:px-10 md:pt-20">
       <RealTimeDisplay
         formData={formData}
         selectedDate={selectedDate}
-        className="w-1/6"
+        className="w-full md:w-1/6 mb-8 md:mb-[100px] "
       />
-      <form className="flex flex-col gap-8 pl-20 w-4/6  h-dvh">
+      <form className="flex flex-col gap-8 w-full md:w-4/6 md:pl-[60px] h-full md:h-auto">
         <h2 className="font-bold text-3xl">การรับเรื่อง</h2>
-        <div className="flex flex-row gap-4">
-          <div className="flex flex-col gap-4 w-1/2">
+        <div className="flex flex-col gap-4 md:flex-row md:gap-4">
+          <div className="flex flex-col gap-4 w-full">
             <label className="text-xl">วัน เวลา รับเรื่อง</label>
-            <div className="flex flex-row gap-4">
+            <div className="flex flex-  gap-4 w-full ">
               <DatePicker
                 label="Select date "
                 value={selectedDate}
@@ -76,7 +77,7 @@ export const ComplaintForm = () => {
               <TimePicker label="Select time" />
             </div>
           </div>
-          <div className="flex flex-col gap-4 w-1/2">
+          <div className="flex flex-col gap-4 w-full">
             <label className="text-xl">
               ช่องทาง<span className="text-red-500">*</span>
             </label>
@@ -111,8 +112,8 @@ export const ComplaintForm = () => {
           </div>
         </div>
         <h3 className="text-3xl font-bold">ผู้แจ้งเรื่อง</h3>
-        <div className="flex flex-row w-full">
-          <div className="flex flex-col gap-4 w-1/2">
+        <div className="flex flex-col w-full md:flex-row">
+          <div className="flex flex-col gap-4 w-full md:w-1/2">
             <label className="text-xl">ชื่อ</label>
             <input
               type="text"
@@ -122,7 +123,7 @@ export const ComplaintForm = () => {
               className="text-xl border border-slate-500	rounded-md w-full	h-[50px] pl-5"
             />
           </div>
-          <div className="flex flex-col gap-4 ml-4 w-1/2">
+          <div className="flex flex-col gap-4 md:mt-2 md:mt-0 ml-0   md:ml-4  w-full md:w-1/2">
             <label className="text-xl">เบอร์โทรศัพท์</label>
             <div className="flex flex-row gap-2">
               <input
@@ -151,7 +152,7 @@ export const ComplaintForm = () => {
         </div>
         <h4 className="text-3xl">ข้อมูลที่แจ้ง</h4>
         <div className="flex flex-row gap-4 w-full">
-          <div className="flex flex-col gap-4 w-1/2 ">
+          <div className="flex flex-col gap-4 w-full md:w-1/2 ">
             <label className="text-xl ">หมวดหมู่</label>
 
             <FormControl fullWidth>
@@ -183,7 +184,7 @@ export const ComplaintForm = () => {
               </Select>
             </FormControl>
           </div>
-          <div className="flex flex-col gap-4 w-1/2">
+          <div className="flex flex-col gap-4 w-full md:w-1/2">
             <label className="text-xl">
               ระดับความสำคัญ<span className="text-red-500"></span>
             </label>
@@ -258,7 +259,7 @@ export const ComplaintForm = () => {
             onChange={handleChange}
           ></textarea>
         </div>
-        <div className="fixed bottom-0  w-4/6 h-[80px] bg-blue-200 shadow-lg p-4 flex justify-center mt-auto">
+        <div className="fixed bottom-0  w-4/6 h-[80px] bg-blue-200 shadow-lg p-4 flex justify-center mt-auto ">
           <Button
             variant="outlined"
             startIcon={<SaveIcon />}
