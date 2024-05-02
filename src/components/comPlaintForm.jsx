@@ -123,7 +123,7 @@ export const ComplaintForm = () => {
               className="text-xl border border-slate-500	rounded-md w-full	h-[50px] pl-5"
             />
           </div>
-          <div className="flex flex-col gap-4 md:mt-2 md:mt-0 ml-0   md:ml-4  w-full md:w-1/2">
+          <div className="flex flex-col gap-4  md:mt-0 ml-0   md:ml-4  w-full md:w-1/2">
             <label className="text-xl">เบอร์โทรศัพท์</label>
             <div className="flex flex-row gap-2">
               <input
